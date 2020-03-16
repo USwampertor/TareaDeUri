@@ -73,52 +73,57 @@ namespace Ancho
      */
     private void button1_Click(object sender, EventArgs e) {
 
-      if (v1 == null) { v1 = new int[v.Length]; }
+      //Reviso si mi lista es nula, y si lo es, para revisar si los nodos ya 
+      //fueron checados o no
+      //if (v1 == null) { v1 = new int[v.Length]; }
+
+      bool[] checkedNodes = new bool[v.Length];
+
+      //Se limpian los valores para poner que ningun nodo ha sido revisado
+      for (int i = 0; i < v1.Length; ++i) { v1[i] = 0; }
+      //Limpio la lista de hijos en orden de anchura
       hijos.Clear();
 
       raiz = comboBox1.SelectedIndex;
 
       string actualNode = "";
-
+      //Genero la lista de nodos temporales a revisar
       List<string> temporalNodes = new List<string>();
+      //Añado a la lista el nodo que el usuario seleccionó
       temporalNodes.Add(v[raiz]);
 
+      //Mientras quede algún nodo por checar, revisa los hijos del nodo a revisar
       while (temporalNodes.Count > 0) {
-        
-        actualNode = temporalNodes[0];
-        temporalNodes.RemoveAt(0);
-        v1[nodes.IndexOf(actualNode)] = 1;
 
+        //MODO ANCHURA revisa el primer nodo de la lista
+        actualNode = temporalNodes[0];
+        //Remuevo de la lista el nodo que estamos checando
+        temporalNodes.RemoveAt(0);
+        //Seteo que este nodo ya está revisado
+        checkedNodes[nodes.IndexOf(actualNode)] = true;
+        //Añado a la lista final el nodo
         hijos.AddLast(nodes.IndexOf(actualNode));
 
         int position = nodes.IndexOf(actualNode);
 
+        //Reviso todas las conexiones posibles  (hijos/vecinos) restantes 
+        //(no han sido metidos a la lista anteriormente)
         for (int i = 0; i < v.Length; ++i) {
-          if (matriz[position, i] != 0 && v1[i] == 0) { temporalNodes.Add(v[i]); }
+          //Checamos la columna del nodo actual y las posibles conexiones
+          if (matriz[position, i] != 0 && 
+              !checkedNodes[i] && 
+              !temporalNodes.Contains(v[i])) { temporalNodes.Add(v[i]); }
+          //Checamos la fila del nodo actual y las posibles conexiones
+          if (matriz[i, position] != 0 && 
+              !checkedNodes[i] && 
+              !temporalNodes.Contains(v[i])) { temporalNodes.Add(v[i]); }
         }
       }
 
+      //Imprimo la lista final
       string s = "";
       s = String.Join(",", hijos);
       MessageBox.Show(s, "El arbol es;");
-
-      /*
-            
-      do {
-        for(x=0;x<v1.Length;++x) {
-          v1[x] = raiz;
-
-
-          IEnumerable<int> df = dif.Except(v1);
-
-          foreach (var str in dif) {
-              if (!hijos.Contains(str)) { hijos.AddLast(str); }
-          }
-        }
-        ++z;
-      } while (z < v1.Length);
-
-  */
     }
   }
 }
