@@ -63,20 +63,6 @@ public class Kruskal : MonoBehaviour
     }
   }
 
-
-  //Does a DFS to check if there is any way to create a cycle with the actual 
-  //connections and the new one
-  private bool
-  doesCreateCycle(List<Subset> subsets, Connection currentConnection) {
-
-    int originSubset = FindSubset(subsets, currentConnection.origin.nodeName - 1);
-    int destinySubset = FindSubset(subsets, currentConnection.destiny.nodeName - 1);
-
-    return originSubset == destinySubset;
-    
-  }
-
-
   public void
   StartKruskal() {
 
@@ -110,9 +96,13 @@ public class Kruskal : MonoBehaviour
       Connection currentConnection = orderedConnections[i];
       ++i;
 
+      int originSubset = FindSubset(subsets, currentConnection.origin.nodeName - 1);
+      int destinySubset = FindSubset(subsets, currentConnection.destiny.nodeName - 1);
+
       //Check if there is no cycle between chosen edges
-      if (!doesCreateCycle(subsets, currentConnection)) {
+      if (originSubset != destinySubset) {
         kruskalTree.Add(currentConnection);
+        UnionSubset(subsets, originSubset, destinySubset);
       }
     }
 

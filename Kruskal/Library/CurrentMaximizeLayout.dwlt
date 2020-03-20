@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 623, y: 444}
+  m_MinSize: {x: 623, y: 422}
   m_MaxSize: {x: 12008, y: 8044}
   vertical: 0
-  controlID: 13507
+  controlID: 3310
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     y: 0
     width: 1404
     height: 947
-  m_MinSize: {x: 346, y: 444}
+  m_MinSize: {x: 346, y: 422}
   m_MaxSize: {x: 8006, y: 8044}
   vertical: 1
-  controlID: 13508
+  controlID: 3279
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,10 +152,10 @@ MonoBehaviour:
     y: 0
     width: 1404
     height: 567
-  m_MinSize: {x: 306, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 304, y: 200}
+  m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 13472
+  controlID: 3204
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,8 +175,8 @@ MonoBehaviour:
     y: 0
     width: 446
     height: 567
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -213,7 +213,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6afbffff3835000028360000
+      m_ExpandedIDs: 56fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_MinSize: {x: 346, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 13509
+  controlID: 3280
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -499,8 +499,8 @@ MonoBehaviour:
     y: 0
     width: 936
     height: 380
-  m_MinSize: {x: 102, y: 122}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 13}
@@ -553,14 +553,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\toa_l\Documents\Work\Kruskal
+  m_LastProjectPath: C:\Users\toa_l\Documents\Work\TareaDeUri\Kruskal
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: aa2e0000
-    m_LastClickedID: 11946
-    m_ExpandedIDs: 000000003a2d000000ca9a3b
+    m_SelectedIDs: b62e0000
+    m_LastClickedID: 11958
+    m_ExpandedIDs: 00000000462d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -588,7 +588,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a2d000000ca9a3b
+    m_ExpandedIDs: 00000000462d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,8 +613,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 88350000
-    m_LastClickedInstanceID: 13704
+    m_SelectedInstanceIDs: 38350000
+    m_LastClickedInstanceID: 13624
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000624300006c3e0000763d0000483c00006a7c0000e43a0000963a00001e480000ee3b00004a440000486300001c4900000e4600000c5d0000c04b0000585c0000243e0000a0600000284e000012400000484e000026710000704a0000865900008e8b0000c05f00008e570000225b0000cc5200008a680000d06a0000b86b0000ac5e00002e5e0000605800009cc400003850000062510000a64e0000000000005e4e0000de510000f04d00009a41000060470000a44e0100844f0000a6460000104e00009c500000a851000064420000d4410000e25100005444020018480000ec3e0000503300003c350000
     m_RenameOverlay:
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 13704
+  m_LastSelectedObjectID: 13624
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -819,8 +819,8 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 13704
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 13624
+  m_LastVerticalScrollValue: 100
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
